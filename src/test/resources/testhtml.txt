@@ -1,0 +1,9 @@
+<html>
+ <head>
+ <title>Mondays -- What a bad idea.</title>
+ </head>
+ <body BGCOLOR="#FFFFFF">
+ <img SRC = "/images/portrait.gif" />
+ Most people have a pathological hatred of Mondays...
+ </body>
+ </html> 

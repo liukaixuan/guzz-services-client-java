@@ -1,0 +1,6 @@
+target/classes/
+target/auto-build/
+target/surefire-reports/
+target/test-classes/
+target/maven-archiver/
+.settings/

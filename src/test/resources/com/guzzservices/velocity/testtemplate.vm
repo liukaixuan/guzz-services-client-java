@@ -1,0 +1,41 @@
+<html>   
+    <body>   
+         
+        Hello $name world;   
+        My name is $project   
+        #set($test = "abc long line that should be truncated xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx")
+        
+        ---------------------------------
+        The time is : $!time!
+        #truncate("Testing $test", 20, "...", true)
+        
+        ---------------------------------
+        The time is : $time!
+
+         #truncate("Testing 2 $test", 20, "...", true)
+        
+        ---------------------------------
+        The time is : $time!
+        
+         #truncate("Testing 3 $test", 20, "...", true)
+        ---------------------------------
+        
+        #set($aList = {1 : 1, 2 : 2, 3 : "abc", 4 : 4, 5 : 3.5, 6:99})
+         #truncate("Testing 3 $test", 20, "...", true, $aList)
+        
+        The time is : $time!
+        
+    </body>   
+</html>
+
+#guzzInc({"business" : "guzzSlowUpdate", "updatePropName" : "countToInc", "pkValue" : 23, "count" : 20})
+
+#guzzList({"var": "m_list" ,"business" : "guzzSlowUpdate", "pageSize" : 4})
+
+#guzzBoundary({"limit": "userId = 5"})
+	#guzzBoundary({"limit": "userId = 6"})
+		
+	#end
+#end
+
+

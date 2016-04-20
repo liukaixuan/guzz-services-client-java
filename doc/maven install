@@ -1,0 +1,2 @@
+
+mvn install:install-file -DgroupId=nl.captcha -DartifactId=SimpleCaptcha -Dversion=1.1.1 -Dpackaging=jar -Dfile=dev-lib/SimpleCaptcha.jar

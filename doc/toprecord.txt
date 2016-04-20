@@ -1,0 +1,23 @@
+	
+	/**统计对象的主id*/
+	private String objectId ;
+		
+	/**操作次数，将按照此字段进行排序*/
+	private int opTimes ;
+		
+	//添加一些常用显示字段
+	private String objectTitle ;
+	
+	/**对象细览地址*/
+	private String objectURL ;
+	
+	private String objectCreatedTime ;
+	
+	/**自定义字段，每个统计对象可以添加一些其他信息供自己展示使用*/
+	private String extra1 ;
+	
+	private String extra2 ;
+	
+	private String extra3 ;
+	
+	
