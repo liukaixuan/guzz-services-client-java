@@ -83,6 +83,11 @@ public class ZKLeaderElectionServiceImpl extends AbstractService implements Enha
 	}
 
 	protected void shutdownZK0() {
+		if(this.isLeader){
+			this.isLeader = false ;
+			this.notifyLeaderStatusChanged(true, false) ;
+		}
+		
 		if (zk != null) {
 			try {
 				zk.close();
@@ -162,6 +167,13 @@ public class ZKLeaderElectionServiceImpl extends AbstractService implements Enha
 			case AuthFailed:
 				// It's all over
 				zkAvailable = false;
+				break;
+			case Disconnected:
+				// It's all over
+				zkAvailable = false;
+
+				// try to reconnect
+				reconnectToZK0();
 				break;
 			}
 		} else if (event.getPath().equals(this.lockPath)) {
